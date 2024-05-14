@@ -2,26 +2,26 @@ import { test, expect } from "@jest/globals";
 
 import { normalizeURL } from "./crawl.js";
 
-describe('normalize url', () => {
-	test('url test', () => {
+describe('normalize url tests', () => {
+	test('tests for https://example.com/ format', () => {
 		const testURL = 'https://itsjustkarthik.com/';
 		const expectedURL = 'itsjustkarthik.com';
 		expect(normalizeURL(testURL)).toBe(expectedURL);
 	});
 	
-	test('url test', () => {
+	test('tests for https://example.com format', () => {
 		const testURL = 'https://itsjustkarthik.com';
 		const expectedURL = 'itsjustkarthik.com';
 		expect(normalizeURL(testURL)).toBe(expectedURL);
 	});
 
-	test('url test', () => {
+	test('tests for http://example.com/ format', () => {
 		const testURL = 'http://itsjustkarthik.com/';
 		const expectedURL = 'itsjustkarthik.com';
 		expect(normalizeURL(testURL)).toBe(expectedURL);
 	});
 
-	test('url test', () => {
+	test('tests for http://example.com format', () => {
 		const testURL = 'http://itsjustkarthik.com';
 		const expectedURL = 'itsjustkarthik.com';
 		expect(normalizeURL(testURL)).toBe(expectedURL);
